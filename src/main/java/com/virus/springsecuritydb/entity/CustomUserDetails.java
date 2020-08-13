@@ -1,6 +1,5 @@
-package com.virus.springsecuritydb.config;
+package com.virus.springsecuritydb.entity;
 
-import com.virus.springsecuritydb.entity.Person;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -18,7 +17,7 @@ public class CustomUserDetails extends Person implements UserDetails {
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return getRoles()
                 .stream()
-                .map(role-> new SimpleGrantedAuthority("ROLE_"+getRoles()))
+                .map(role -> new SimpleGrantedAuthority("ROLE_"+role.getRole()))
                 .collect(Collectors.toList());
     }
 

@@ -19,10 +19,10 @@ public class Person {
     private Set<Role> roles;
 
     public Person(Person person) {
-        this.personId = getPersonId();
-        this.name = getName();
-        this.password = getPassword();
-        this.roles = getRoles();
+        this.personId = person.getPersonId();
+        this.name = person.getName();
+        this.password = person.getPassword();
+        this.roles = person.getRoles();
     }
 
     public Person() {

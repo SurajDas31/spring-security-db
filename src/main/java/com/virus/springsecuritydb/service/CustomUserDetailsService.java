@@ -1,6 +1,6 @@
 package com.virus.springsecuritydb.service;
 
-import com.virus.springsecuritydb.config.CustomUserDetails;
+import com.virus.springsecuritydb.entity.CustomUserDetails;
 import com.virus.springsecuritydb.entity.Person;
 import com.virus.springsecuritydb.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
